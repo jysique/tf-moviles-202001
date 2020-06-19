@@ -5,16 +5,16 @@
     {
       "time": 1,
       "x": 0.05,
-      "health": 6,
+      "health": 60,
       "speedX": 20, 
       "speedY": 50,
       "key": "greenEnemy",
-      "scale": 3
+      "scale": 1
     },
     {
       "time": 2,
       "x": 0.1,
-      "health": 3,
+      "health": 30,
       "speedX": 50, 
       "speedY": 50,
       "key": "greenEnemy",
@@ -23,7 +23,7 @@
     {
       "time": 3,
       "x": 0.1,
-      "health": 3,
+      "health": 30,
       "speedX": 50, 
       "speedY": 50,
       "key": "greenEnemy",
@@ -32,7 +32,7 @@
     {
       "time": 4,
       "x": 0.1,
-      "health": 3,
+      "health": 30,
       "speedX": 50, 
       "speedY": 50,
       "key": "greenEnemy",
@@ -41,7 +41,7 @@
     {
       "time": 5,
       "x": 0.1,
-      "health": 3,
+      "health": 30,
       "speedX": 50, 
       "speedY": 50,
       "key": "greenEnemy",
@@ -50,26 +50,26 @@
     {
       "time": 6,
       "x": 0.1,
-      "health": 6,
+      "health": 60,
       "speedX": 50, 
       "speedY": 50,
       "key": "greenEnemy",
-      "scale": 3
+      "scale": 1
     },
     {
       "time": 7,
       "x": 0.9,
-      "health": 3,
-      "speedX": -50, 
+      "health": 100,
+      "speedX": 50, 
       "speedY": 50,
       "key": "redEnemy",
-      "scale": 2
+      "scale": 1
     },
     {
       "time": 8,
       "x": 0.9,
-      "health": 3,
-      "speedX": -50, 
+      "health": 30,
+      "speedX": 50, 
       "speedY": 50,
       "key": "redEnemy",
       "scale": 1
@@ -77,8 +77,8 @@
     {
       "time": 9,
       "x": 0.9,
-      "health": 3,
-      "speedX": -50, 
+      "health": 30,
+      "speedX": 50, 
       "speedY": 50,
       "key": "redEnemy",
       "scale": 1
@@ -86,8 +86,8 @@
     {
       "time": 10,
       "x": 0.9,
-      "health": 3,
-      "speedX": -50, 
+      "health": 30,
+      "speedX": 50, 
       "speedY": 50,
       "key": "redEnemy",
       "scale": 1
@@ -95,8 +95,8 @@
     {
       "time": 11,
       "x": 0.9,
-      "health": 3,
-      "speedX": -50, 
+      "health": 100,
+      "speedX": 50, 
       "speedY": 50,
       "key": "redEnemy",
       "scale": 1
@@ -104,16 +104,16 @@
     {
       "time": 12,
       "x": 0.9,
-      "health": 6,
-      "speedX": -50, 
+      "health": 60,
+      "speedX": 50, 
       "speedY": 50,
       "key": "redEnemy",
-      "scale": 3
+      "scale": 1
     },
     {
       "time": 13,
       "x": 0.1,
-      "health": 3,
+      "health": 30,
       "speedX": 100, 
       "speedY": 20,
       "key": "greenEnemy",
@@ -122,7 +122,7 @@
     {
       "time": 14,
       "x": 0.1,
-      "health": 3,
+      "health": 30,
       "speedX": 100, 
       "speedY": 20,
       "key": "yellowEnemy",
@@ -131,7 +131,7 @@
     {
       "time": 15,
       "x": 0.1,
-      "health": 3,
+      "health": 30,
       "speedX": 100, 
       "speedY": 20,
       "key": "yellowEnemy",
@@ -140,7 +140,7 @@
     {
       "time": 16,
       "x": 0.1,
-      "health": 3,
+      "health": 30,
       "speedX": 100, 
       "speedY": 20,
       "key": "yellowEnemy",
@@ -149,7 +149,7 @@
     {
       "time": 17,
       "x": 0.1,
-      "health": 3,
+      "health": 30,
       "speedX": 100, 
       "speedY": 20,
       "key": "yellowEnemy",
@@ -158,11 +158,11 @@
     {
       "time": 18,
       "x": 0.1,
-      "health": 12,
+      "health": 120,
       "speedX": 120, 
       "speedY": 50,
       "key": "yellowEnemy",
-      "scale": 5
+      "scale": 1
     }
     
   ]

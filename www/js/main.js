@@ -1,6 +1,6 @@
 window.onload = function () {
-  // let game = new Phaser.Game(700, 350, Phaser.AUTO);
-  let game = new Phaser.Game("100%","100%",Phaser.AUTO);
+  let game = new Phaser.Game(600, 350, Phaser.AUTO);
+  // let game = new Phaser.Game("100%","100%",Phaser.AUTO);
   // let game = new Phaser.Game(2280, 2690, Phaser.AUTO);
   //nombre del diccionario, nombra de la clase
   game.state.add("Preload", Preload);

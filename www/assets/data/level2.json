@@ -9,7 +9,7 @@
       "speedX": 20, 
       "speedY": 50,
       "key": "yellowEnemy",
-      "scale": 3
+      "scale": 1
     },
     {
       "time": 2,
@@ -54,7 +54,7 @@
       "speedX": 50, 
       "speedY": 50,
       "key": "yellowEnemy",
-      "scale": 3
+      "scale": 1
     },
     {
       "time": 7,
@@ -63,7 +63,7 @@
       "speedX": -50, 
       "speedY": 50,
       "key": "redEnemy",
-      "scale": 2
+      "scale": 1
     },
     {
       "time": 8,
@@ -108,7 +108,7 @@
       "speedX": -50, 
       "speedY": 50,
       "key": "redEnemy",
-      "scale": 3
+      "scale": 1
     },
     {
       "time": 13,
@@ -162,7 +162,7 @@
       "speedX": 100, 
       "speedY": 40,
       "key": "yellowEnemy",
-      "scale": 4
+      "scale": 1
     }
     
   ]
