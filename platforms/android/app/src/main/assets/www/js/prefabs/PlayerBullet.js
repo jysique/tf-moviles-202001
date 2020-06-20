@@ -16,13 +16,13 @@ PlayerBullet.prototype.constructor = PlayerBullet;
 
 PlayerBullet.prototype.changeType = function(){
     if (this.type == 1) {
-        this.scale.setTo(2,2);
+        this.scale.setTo(0.5,2);
     }
     else if(this.type == 2){
-        this.scale.setTo(10,2);
+        this.scale.setTo(1,2);
     }
     else if(this.type == 3){
-        this.scale.setTo(10,10);
+        this.scale.setTo(1,6);
     }
     
 }

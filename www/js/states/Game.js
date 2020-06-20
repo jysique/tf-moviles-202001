@@ -13,17 +13,14 @@ Game.prototype = {
         this.TOTAL_INFECTED = total_infected;
         
         this.score = this.TOTAL_INFECTED / this.TOTAL_PERSONAS * 100;
-        // console.log("s " + this.score);
         this.score = 0;
         localStorage.points = 100;
         this.maxScore = localStorage.points;
         this.BULLET_SPEED = 500;
         this.TOTAL_PERSONAS = 15;
-        console.log("level " + this.currentLevel);
-        console.log("maximo " + localStorage.points);
     },
     create:function(){
-        this.background = this.game.add.tileSprite(0,0,this.game.world.width,this.game.world.height,"space");
+        this.background = this.game.add.tileSprite(0,0,this.game.world.width,this.game.world.height,"back");
         this.background.autoScroll(30,0);
         this.createPlayer();
         this.initBullets();
@@ -34,9 +31,10 @@ Game.prototype = {
     createPlayer:function(){
         this.player = this.game.add.sprite(this.game.world.centerX/2, this.game.world.height/2,'player');
         this.player.anchor.setTo(0.5);
-        this.player.angle = 90;
+        this.player.scale.setTo(0.2);
         this.physics.arcade.enable(this.player);
         this.player.body.collideWorldBounds = true;
+        this.player.animations.add("hit", [1,0,1],60,false);
         this.initPlayermovement();
     },
     initBullets:function(){
@@ -46,18 +44,19 @@ Game.prototype = {
     },
     createPlayerBullets:function(){
         let bullet = this.playerBullets.getFirstDead();
+
         if(!bullet){
           bullet = new PlayerBullet(this.game,this.player.x,this.player.y,this.typeBullet);
         }else{
-            // console.log("sqsqs");
           bullet.reset(this.player.x,this.player.y,this.typeBullet);
         }
+        this.player.play("hit");
         this.playerBullets.add(bullet);
         bullet.body.velocity.x = this.BULLET_SPEED;
       },
     loadLevel(){
         if (this.currentLevel == this.numLevels) {
-            console.log(localStorage.points);
+            localStorage.win = 1;
             this.state.start("Gameover");
         }
         this.currentIndexEnemy = 0;
@@ -82,9 +81,8 @@ Game.prototype = {
         this.enemies.enableBody = true;
     },
     scheduleNextEnemy:function(){
-        // console.log(this.currentIndexEnemy);
         let nextEnemy = this.levelData.enemies[this.currentIndexEnemy];
-        // console.log(nextEnemy);
+
         if(nextEnemy){
             let nextTime = 500*(this.currentIndexEnemy == 0 ? 1 : 
                                                     this.levelData.enemies[this.currentIndexEnemy].time);
@@ -104,7 +102,6 @@ Game.prototype = {
             enemy = new Enemy(this.game,x,y,key,health);
             this.enemies.add(enemy);
         }
-        // enemy.createBullet.add(this.createBulletEnemy,this);
         enemy.reset(x,y,scale,key,health,speedX,speedY);
     },
     update:function(){
@@ -114,22 +111,18 @@ Game.prototype = {
         this.enemies.forEachAlive(function(enemy){
             if(enemy.x< -50){
                 let randC = this.game.rnd.integerInRange(1,6);
-                // console.log(randC);
                 this.TOTAL_INFECTED+= randC;
             }
         },this);
-        // console.log("p: " + this.TOTAL_PERSONAS);
-        // console.log("i: " + this.TOTAL_INFECTED);
-        // console.log("%: "+ Math.ceil(this.score));
+
         if (this.TOTAL_INFECTED >= this.TOTAL_PERSONAS) {
+            localStorage.win = 0;
             this.state.start("Gameover");
         }
 
         this.score = this.TOTAL_INFECTED / this.TOTAL_PERSONAS * 100;
         this.scoreText.setText("Infectados:" +Math.ceil(this.score) +" %");
 
-        console.log("score: " + this.score);
-        console.log("maxscore: " + this.maxScore);
         if(this.score <this.maxScore){
             localStorage.points = this.score;
         }
@@ -169,6 +162,7 @@ Game.prototype = {
             this.spacekey.onDown.add(this.createPlayerBullets,this);
         }
         this.qkey.onDown.add(this.changeTypeBullets,this);
+        
     },
     changeTypeBullets:function(){
         this.typeBullet++;
@@ -177,9 +171,14 @@ Game.prototype = {
         }
     },
     hud:function(){
+        
+        this.levelText = this.game.add.text(0,0,'Level: '+ this.currentLevel);
+		// this.levelText.fill = "#FFFFFF";
+        this.levelText.x = 20;
+        
 		this.scoreText = this.game.add.text(0,0,'Infectados: '+ this.score + " %");
-		this.scoreText.fill = "#FFFFFF";
-		this.scoreText.x = 20;
+		// this.scoreText.fill = "#FFFFFF";
+        this.scoreText.x = 150;
 
 	},
 }

@@ -5,18 +5,17 @@ Enemy = function(game,x,y,key,health){
     this.game = game;
     
     this.health = health + 200;
-    // console.log("h"+ this.health);
-    this.animations.add("getHit", [0,1,2,1,0],25,false);
+
+    this.animations.add("idle", [0,1,0],50,false);
     this.anchor.setTo(0.5);
 
-    // this.createBullet = new Phaser.Signal();
+    this.animations.add("getHit", [4,5,6,7,6,5,4],50,false);
+    this.anchor.setTo(0.5);
+
 
     this.enemyTimer = this.game.time.create(false);
     this.enemyTimer.start();
-    // this.scheduleShooting();
 
-    // this.symptoms = new Phaser.Signal();
-    // this.contagious = false;
     
 }
 Enemy.prototype = Object.create(Phaser.Sprite.prototype);
@@ -27,6 +26,7 @@ Enemy.prototype.update = function(){
     if (this.position.x < -50 ) {
         this.kill();
     }
+    // this.play("idle");
 }
 Enemy.prototype.damage = function(amount){
     Phaser.Sprite.prototype.damage.call(this,amount); //HERENCIA
