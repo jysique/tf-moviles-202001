@@ -1,11 +1,11 @@
 {
-  "duration": 35,
+  "duration": 180,
   "enemies": 
   [
     {
       "time": 1,
       "x": 0.05,
-      "health": 30,
+      "health": 70,
       "speedX": 50, 
       "speedY": 50,
       "key": "virus",
@@ -14,7 +14,7 @@
     {
       "time": 2,
       "x": 0.1,
-      "health": 30,
+      "health": 70,
       "speedX": 50, 
       "speedY": 50,
       "key": "virus",
@@ -23,7 +23,7 @@
     {
       "time": 3,
       "x": 0.1,
-      "health": 30,
+      "health": 70,
       "speedX": 50, 
       "speedY": 50,
       "key": "virus",
@@ -32,7 +32,7 @@
     {
       "time": 4,
       "x": 0.1,
-      "health": 30,
+      "health": 70,
       "speedX": 50, 
       "speedY": 50,
       "key": "virus",
@@ -41,7 +41,7 @@
     {
       "time": 5,
       "x": 0.1,
-      "health": 30,
+      "health": 80,
       "speedX": 50, 
       "speedY": 50,
       "key": "virus",
@@ -50,7 +50,7 @@
     {
       "time": 6,
       "x": 0.1,
-      "health": 60,
+      "health": 80,
       "speedX": 50, 
       "speedY": 50,
       "key": "virus",
@@ -59,16 +59,16 @@
     {
       "time": 7,
       "x": 0.9,
-      "health": 100,
+      "health": 80,
       "speedX": 50, 
       "speedY": 50,
-      "key": "redEnemy",
+      "key": "virus",
       "scale": 1
     },
     {
       "time": 8,
       "x": 0.9,
-      "health": 30,
+      "health": 80,
       "speedX": 50, 
       "speedY": 50,
       "key": "virus",
@@ -77,7 +77,7 @@
     {
       "time": 9,
       "x": 0.9,
-      "health": 30,
+      "health": 80,
       "speedX": 50, 
       "speedY": 50,
       "key": "virus",
@@ -86,7 +86,7 @@
     {
       "time": 10,
       "x": 0.9,
-      "health": 30,
+      "health": 100,
       "speedX": 50, 
       "speedY": 50,
       "key": "virus",
@@ -104,7 +104,7 @@
     {
       "time": 12,
       "x": 0.9,
-      "health": 60,
+      "health": 100,
       "speedX": 50, 
       "speedY": 50,
       "key": "virus",
@@ -113,55 +113,55 @@
     {
       "time": 13,
       "x": 0.1,
-      "health": 30,
-      "speedX": 100, 
-      "speedY": 20,
+      "health": 100,
+      "speedX": 50, 
+      "speedY": 50,
       "key": "virus",
       "scale": 1
     },
     {
       "time": 14,
       "x": 0.1,
-      "health": 30,
-      "speedX": 100, 
-      "speedY": 20,
+      "health": 100,
+      "speedX": 50, 
+      "speedY": 50,
       "key": "virus",
       "scale": 1
     },
     {
       "time": 15,
       "x": 0.1,
-      "health": 30,
-      "speedX": 100, 
-      "speedY": 20,
+      "health": 100,
+      "speedX": 50, 
+      "speedY": 50,
       "key": "virus",
       "scale": 1
     },
     {
       "time": 16,
       "x": 0.1,
-      "health": 30,
-      "speedX": 100, 
-      "speedY": 20,
+      "health": 130,
+      "speedX": 50, 
+      "speedY": 50,
       "key": "virus",
       "scale": 1
     },
     {
       "time": 17,
       "x": 0.1,
-      "health": 30,
-      "speedX": 100, 
-      "speedY": 20,
+      "health": 130,
+      "speedX": 50, 
+      "speedY": 50,
       "key": "virus",
       "scale": 1
     },
     {
       "time": 18,
       "x": 0.1,
-      "health": 120,
-      "speedX": 120, 
+      "health": 60,
+      "speedX": 50, 
       "speedY": 50,
-      "key": "yellowEnemy",
+      "key": "red_enemy",
       "scale": 1
     }
     

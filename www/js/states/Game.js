@@ -85,9 +85,11 @@ Game.prototype = {
 
         if(nextEnemy){
             let nextTime = 500*(this.currentIndexEnemy == 0 ? 1 : 
-                                                    this.levelData.enemies[this.currentIndexEnemy].time);
+                    this.levelData.enemies[this.currentIndexEnemy-1].time);
             this.nextEnemyTimer = this.game.time.events.add(nextTime,function(){
                 let randy =this.game.rnd.integerInRange(50, this.game.world.width-300);
+                console.log("S:" + this.currentIndexEnemy);
+                console.log("next:" + nextTime);
                 this.createEnemy(this.game.world.height +300, randy,
                                 nextEnemy.health,nextEnemy.key,
                                 nextEnemy.scale,nextEnemy.speedX,nextEnemy.speedY)

@@ -10,10 +10,9 @@ Preload.prototype = {
     // this.game.load.image("player","assets/images/player.png");
     this.game.load.image("button","assets/images/btn.png");
     this.game.load.image("space","assets/images/space.png");
-
     this.game.load.image("back","assets/images/celeste.png");
 
-
+    this.game.load.image("background","assets/images/background.png");
     this.game.load.image("enemyParticle","assets/images/enemyParticle.png");
     
 

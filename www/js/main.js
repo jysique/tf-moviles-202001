@@ -5,6 +5,7 @@ window.onload = function () {
   //nombre del diccionario, nombra de la clase
   game.state.add("Preload", Preload);
   game.state.add("Gameover", Gameover);
+  game.state.add("Instrucciones", Instrucciones);
   game.state.add("Game", Game);
   game.state.add("Menu", Menu);
   game.state.start("Preload");
