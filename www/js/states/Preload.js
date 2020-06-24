@@ -25,6 +25,7 @@ Preload.prototype = {
     this.game.load.spritesheet("virus","assets/images/virus.png",45,42);
     this.game.load.image("bullet","assets/images/laser.png");
     this.game.load.spritesheet("player","assets/images/doctor.png",222,220);
+    this.game.load.spritesheet("player_red","assets/images/doctor_red.png",222,220);
 
     this.game.load.text("level1", "assets/data/level1.json");
     this.game.load.text("level2", "assets/data/level2.json");

@@ -21,7 +21,7 @@ Game.prototype = {
     },
     create:function(){
         this.background = this.game.add.tileSprite(0,0,this.game.world.width,this.game.world.height,"back");
-        this.background.autoScroll(30,0);
+        this.background.autoScroll(-30,0);
         this.createPlayer();
         this.initBullets();
         this.initEnemies();
@@ -29,7 +29,12 @@ Game.prototype = {
         this.hud();
     },
     createPlayer:function(){
-        this.player = this.game.add.sprite(this.game.world.centerX/2, this.game.world.height/2,'player');
+        if (localStorage.player == 1) {
+            this.player = this.game.add.sprite(this.game.world.centerX/2, this.game.world.height/2,'player');
+        }else if (localStorage.player == 2){
+            this.player = this.game.add.sprite(this.game.world.centerX/2, this.game.world.height/2,'player_red');
+        }
+        
         this.player.anchor.setTo(0.5);
         this.player.scale.setTo(0.2);
         this.physics.arcade.enable(this.player);

@@ -32,7 +32,7 @@ Menu.prototype = {
 	},
 	goPlay:function(){
 		localStorage.points = 1;
-		this.state.start("Game");
+		this.state.start("Selection");
 	},
 	goInstrucc:function(){
 		this.state.start("Instrucciones");

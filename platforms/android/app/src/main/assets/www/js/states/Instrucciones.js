@@ -31,7 +31,7 @@ Instrucciones.prototype = {
 	},
 	goPlay:function(){
 		localStorage.points = 1;
-		this.state.start("Game");
+		this.state.start("Selection");
     },
     goBack:function(){
 		localStorage.points = 1;
