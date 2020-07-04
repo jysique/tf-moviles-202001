@@ -2,13 +2,15 @@ Menu = function () {}
 Menu.prototype = {
     create:function(){
 		this.background = this.game.add.sprite(0,0,'background');
+		this.hospital_sf = this.game.add.audio("hospital");
+		this.hospital_sf.play();
 
-		this.titleText1 = this.game.add.text(10,150,'Coronavirus');
+		this.titleText1 = this.game.add.text(10,100,'Coronavirus');
 		// this.titleText1.anchor.setTo(1,0.5);
-		this.titleText1.scale.setTo(2,2);
-		this.titleText2 = this.game.add.text(10,250,'Reloaded');
+		this.titleText1.scale.setTo(1,1);
+		this.titleText2 = this.game.add.text(10,150,'Reloaded');
 		// this.titleText2.anchor.setTo(1,0.5);
-		this.titleText2.scale.setTo(2,2);
+		this.titleText2.scale.setTo(1,1);
 
 		this.playText1 = this.game.add.text(470,200,'Play');
 		this.playText1.anchor.setTo(1,0.5);
@@ -32,9 +34,11 @@ Menu.prototype = {
 	},
 	goPlay:function(){
 		localStorage.points = 1;
+		this.hospital_sf.stop();
 		this.state.start("Selection");
 	},
 	goInstrucc:function(){
+		this.hospital_sf.stop();
 		this.state.start("Instrucciones");
 	}
 };

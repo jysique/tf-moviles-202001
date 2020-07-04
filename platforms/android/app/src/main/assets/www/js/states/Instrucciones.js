@@ -2,6 +2,9 @@ Instrucciones = function () {}
 Instrucciones.prototype = {
     create:function(){
 		this.background = this.game.add.sprite(0,0,'background');
+		
+		this.hospital_sf = this.game.add.audio("hospital");
+		this.hospital_sf.play();
 
 		this.titleText1 = this.game.add.text(10,10,'Instrucciones:');
         

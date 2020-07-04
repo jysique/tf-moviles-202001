@@ -6,8 +6,6 @@ Preload.prototype = {
     this.scale.pageAlignHorizontally = true;
     this.scale.pageAlignVertically = true;
 
-    // this.game.load.image("bullet","assets/images/bullet.png");
-    // this.game.load.image("player","assets/images/player.png");
     this.game.load.image("button","assets/images/btn.png");
     this.game.load.image("space","assets/images/space.png");
     this.game.load.image("back","assets/images/celeste.png");
@@ -30,6 +28,9 @@ Preload.prototype = {
     this.game.load.text("level1", "assets/data/level1.json");
     this.game.load.text("level2", "assets/data/level2.json");
     this.game.load.text("level3", "assets/data/level3.json");
+
+    this.load.audio("hospital","assets/audio/sound_effect_hospital.mp3");
+    this.load.audio("centro_pokemon","assets/audio/Pokémon Rojo FuegoVerde Hoja OST - 19 - Centro Pokémon.mp3");
   },
   create: function () {
     this.state.start("Menu");

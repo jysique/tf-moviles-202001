@@ -4,6 +4,9 @@ Selection.prototype = {
         this.background = this.game.add.tileSprite(0,0,this.game.world.width,this.game.world.height,"back");
         this.background.autoScroll(-30,0);
 
+        this.hospital_sf = this.game.add.audio("hospital");
+        this.hospital_sf.play();
+        
 		this.titleText1 = this.game.add.text(10,10,'Selection');
 
         this.initBackButton();
@@ -22,14 +25,17 @@ Selection.prototype = {
         this.character2.events.onInputDown.add(this.goPlayTwo,this);
 	},
 	goPlayOne:function(){
+        this.hospital_sf.stop();
         localStorage.player = 1;
 		this.state.start("Game");
     },
 	goPlayTwo:function(){
+        this.hospital_sf.stop();
         localStorage.player = 2;
 		this.state.start("Game");
     },
     goBack:function(){
+        this.hospital_sf.stop();
 		localStorage.points = 1;
 		this.state.start("Menu");
     },

@@ -6,7 +6,9 @@ Game.prototype = {
         this.currentLevel = currentLevel || 1;
         this.numLevels = 3;
 
-        
+        this.centropokemon_sf = this.game.add.audio("centro_pokemon");
+		this.centropokemon_sf.play();
+
         if (total_infected == null) {
             total_infected = 0;
         }
