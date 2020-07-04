@@ -3,10 +3,10 @@ Menu.prototype = {
     create:function(){
 		this.background = this.game.add.sprite(0,0,'background');
 
-		this.titleText1 = this.game.add.text(10,150,'Trabajo');
+		this.titleText1 = this.game.add.text(10,150,'Coronavirus');
 		// this.titleText1.anchor.setTo(1,0.5);
 		this.titleText1.scale.setTo(2,2);
-		this.titleText2 = this.game.add.text(10,250,'Final');
+		this.titleText2 = this.game.add.text(10,250,'Reloaded');
 		// this.titleText2.anchor.setTo(1,0.5);
 		this.titleText2.scale.setTo(2,2);
 
