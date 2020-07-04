@@ -3,10 +3,14 @@ Instrucciones.prototype = {
     create:function(){
 		this.background = this.game.add.sprite(0,0,'background');
 
-		this.titleText1 = this.game.add.text(10,10,'Instrucciones');
+		this.titleText1 = this.game.add.text(10,10,'Instrucciones:');
         
         this.titleText1 = this.game.add.text(10,40,'Shoot : Space');
-        this.titleText1 = this.game.add.text(10,70,'Cambiar arma : Q');
+		this.titleText1 = this.game.add.text(10,70,'Cambiar arma : Q');
+		
+		this.titleText1 = this.game.add.text(10,100,'Integrantes:');
+		this.titleText1 = this.game.add.text(10,130,'Jose Ysique Neciosup');
+		this.titleText1 = this.game.add.text(10,170,'Nilton Mercado Chavez');
 
 		this.playText1 = this.game.add.text(470,300,'Play');
 		this.playText1.anchor.setTo(1,0.5);
